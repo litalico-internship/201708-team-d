@@ -5,6 +5,11 @@ class NoticesController < ApplicationController
     @notices = Notice.where(user_id: @user.id)
   end
 
+  def state_change
+    notice = Notice.find(params[:notice_id])
+    notice.status_id = 2
+  end
+
   def new
 
   end
