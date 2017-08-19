@@ -1,0 +1,2 @@
+class NoticeSign < ApplicationRecord
+end
