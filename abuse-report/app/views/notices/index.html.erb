@@ -2,12 +2,14 @@
     <h2 class="notices-title">報告履歴</h2>
     <table class="table table-borderd">
         <tr>
+          <th>ID</th>
           <th>理由</th>
           <th>日付</th>
           <th>状況</th>
           </tr>
         <% @notices.each do |notice| %>
         <tr>
+          <td><%= notice.id %>
           <td><%= notice.signs.first.name %></td>
           <td><%= notice.created_at.strftime('%Y年%m月%d日').to_s %></td>
           <td class="date status-<%= notice.status_id %>"><%= notice.status.name %></td>

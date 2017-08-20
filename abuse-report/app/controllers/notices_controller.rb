@@ -2,7 +2,7 @@ class NoticesController < ApplicationController
   before_action :check_user
 
   def index
-    @notices = Notice.where(user_id: @user.id)
+    @notices = Notice.where(user_id: @user.id).order(created_at: :desc)
   end
 
   def state_change
