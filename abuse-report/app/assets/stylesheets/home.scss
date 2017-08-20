@@ -104,10 +104,15 @@ a{
   width: 100%;
   margin-top: 150px;
 }
-.done-title{
+.done-title,
+.done-number{
   width: 100%;
   text-align: center;
   font-size: 50px;
+}
+.done-number{
+  margin-top: 50px;
+  font-size: 45px;
 }
 .done .top-button{
   margin-top: 100px;
