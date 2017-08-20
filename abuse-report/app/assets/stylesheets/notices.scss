@@ -1,3 +1,26 @@
 // Place all the styles related to the notices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#situation-title{
+
+  width: 100%;
+}
+.school{
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
+}
+.situation-sentence{
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+}
+#situation{
+  position: relative;
+  height: 300px;
+  margin-bottom: 50px;
+}
+.situation-img img{
+  width: 100%;
+  height: 280px;
+}
