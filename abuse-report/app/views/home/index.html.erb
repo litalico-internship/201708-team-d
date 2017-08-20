@@ -1,3 +1,19 @@
+<div class="report">
+  <% if @notice.present? %>
+  <table class="table table-borderd">
+      <tr>
+        <th>理由</th>
+        <th>日付</th>
+        <th>状況</th>
+        </tr>
+  <tr>
+    <td><%= @notice.signs.first.name %></td>
+    <td><%= @notice.created_at.strftime('%Y年%m月%d日').to_s %></td>
+    <td class="date status-<%= @notice.status_id %>"><%= @notice.status.name %></td>
+  </tr>
+</table>
+<% end %>
+</div>
 <div class="map">
     <div class="map-question">
     <h2>どこの小学校ですか？</h2>

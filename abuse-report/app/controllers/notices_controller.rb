@@ -15,6 +15,7 @@ class NoticesController < ApplicationController
   def new
     @signs = Sign.all
     @notice = Notice.new(user_id: @user.id)
+    @school = School.all.shuffle.first
   end
 
   def create

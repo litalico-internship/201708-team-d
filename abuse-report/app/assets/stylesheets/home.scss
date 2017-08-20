@@ -59,6 +59,19 @@ a{
     color: #F4BB6F;
     border: 2px #F4BB6F solid;
   }
+  .report{
+
+  }
+  .report .table{
+    margin: 20px 10%;
+    width: 80%;
+  }
+  .report .table th{
+    font-size: 40px;
+  }
+  .report .table td{
+    font-size: 30px;
+  }
   .map{
     height: calc(100vh-100px);
     height: 92vh;
