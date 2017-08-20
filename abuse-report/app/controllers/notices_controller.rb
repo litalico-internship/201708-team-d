@@ -11,6 +11,7 @@ class NoticesController < ApplicationController
     if 0 < id && id < 5
       notice.status_id = id
       notice.save
+      redirect_to :root
     end
   end
 
