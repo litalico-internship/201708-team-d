@@ -3,6 +3,8 @@ class NoticesController < ApplicationController
 
   def index
     @notices = Notice.where(user_id: @user.id)
+    p @user
+    p @notices
   end
 
   def state_change
@@ -16,7 +18,7 @@ class NoticesController < ApplicationController
   end
 
   def create
-    @notice = Notice.new
+    @notice = Notice.new(user_id: @user.id, status_id: 1)
     sign = Sign.find(params[:sign_id])
     @notice.notice_signs.build(sign: sign)
     @notice.save
