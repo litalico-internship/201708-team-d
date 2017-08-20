@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :notices do
-    get '/state_change', to: 'notices#state_change'
+    get '/state_change/:id', to: 'notices#state_change'
   end
 
   get '/create_notices', to: 'notices#create'

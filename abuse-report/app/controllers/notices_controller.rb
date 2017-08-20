@@ -3,13 +3,15 @@ class NoticesController < ApplicationController
 
   def index
     @notices = Notice.where(user_id: @user.id)
-    p @user
-    p @notices
   end
 
   def state_change
     notice = Notice.find(params[:notice_id])
-    notice.status_id = 2
+    id = params[:id].to_i
+    if 0 < id && id < 5
+      notice.status_id = id
+      notice.save
+    end
   end
 
   def new
