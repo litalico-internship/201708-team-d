@@ -69,9 +69,14 @@
   margin-bottom: 70px;
 }
 .situation-img img{
+  border: 2px #999 solid;
+  border-radius: 10px;
   width: 100%;
   height: 280px;
   margin-bottom: 10px;
+}
+.situation-img img:hover{
+  opacity: 0.5
 }
 .situation-subtitle{
   text-align: center;
