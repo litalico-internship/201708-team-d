@@ -11,12 +11,24 @@
 <div class="container">
   <div class="row">
     <h2 class="col-sm-12">報告履歴</h2>
-    <ul class="col-sm-12">
-      <li class="">〇〇の報告は通報されました</li>
-      <li class="">〇〇の報告は通報されました</li>
-      <li class="">〇〇の報告は通報されました</li>
-      <li class="">〇〇の報告は通報されました</li>
-    </ul>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 ol-md-6 col-sm-3-offset col-md-3-offset">
+      <table class="table table-borderd">
+        <tr>
+          <th>id</th>
+          <th>status_id</th>
+        </tr>
+        <% @notices.each do |notice| %>
+        <tr>
+          <td>notice.id</td>
+          <td>notice.status_id</td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-sm-12">
       <a href="/home">トップページへ戻ります</a>
     </div>
