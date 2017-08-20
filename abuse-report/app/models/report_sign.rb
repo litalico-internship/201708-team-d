@@ -1,0 +1,2 @@
+class ReportSign < ApplicationRecord
+end
