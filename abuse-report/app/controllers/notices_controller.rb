@@ -11,16 +11,22 @@ class NoticesController < ApplicationController
   end
 
   def new
-
+    @signs = Sign.all
+    @notice = Notice.new(user_id: @user.id)
   end
 
   def create
-    @notice = Notice.new(notice_params)
+    @notice = Notice.new
+    sign = Sign.find(params[:sign_id])
+    @notice.notice_signs.build(sign: sign)
     @notice.save
+    redirect_to controller: 'home', action: 'done'
   end
 
   private
     def notice_params
-      params.permit(:school, :user, :status)
+      params.permit(:school, :user, :status, notice_signs_attributes:[
+        :sign_id
+        ])
     end
 end

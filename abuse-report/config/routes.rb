@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     get '/state_change', to: 'notices#state_change'
   end
 
+  get '/create_notices', to: 'notices#create'
+
 end

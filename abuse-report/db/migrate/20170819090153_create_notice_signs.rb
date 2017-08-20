@@ -5,6 +5,5 @@ class CreateNoticeSigns < ActiveRecord::Migration[5.0]
       t.references :sign
       t.timestamps
     end
-    add_index :notice_signs, [:notice, :sign], unique: true
   end
 end

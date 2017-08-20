@@ -11,7 +11,14 @@ class ApplicationController < ActionController::Base
       end
     else
       @user = User.find_by(session_id: cookies[:uuid])
-    end
+      if @user.nil?
+        uuid = Digest::SHA256.hexdigest(Time.now.to_s)
+        @user = User.new(session_id: uuid)
+        if @user.save
+          cookies[:uuid] = uuid
+        end
+      end
+  end
   end
 
 end
